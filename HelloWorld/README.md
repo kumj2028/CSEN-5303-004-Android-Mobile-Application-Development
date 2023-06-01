@@ -1,0 +1,2 @@
+This project was made using the "No Activity" option when choosing to create a new project.
+From there, the MainActivity.java and activity_main.xml were created following https://www.tutorialspoint.com/android/android_hello_world_example.htm
