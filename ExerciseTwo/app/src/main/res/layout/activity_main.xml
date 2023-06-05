@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    tools:context="com.example.exercisetwo.MainActivity">
+
+    <TextView android:id="@+id/myTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/editText"
+        android:layout_alignLeft="@id/addButton"
+        android:layout_alignTop="@id/editText"
+        android:layout_toLeftOf="@id/editText"
+        android:text="@string/tv1Text"
+        android:textSize="20dp"/>
+
+    <EditText android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/et1Hint"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        />
+
+    <Button android:id="@+id/subtractButton"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_above="@id/resetButton"
+        android:layout_alignLeft="@id/addButton"
+        android:layout_alignRight="@id/addButton"
+        android:text="@string/subtractone"/>
+
+    <Button android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_above="@id/subtractButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@id/editText"
+        android:text="@string/addone"/>
+
+    <Button android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@id/subtractButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/subtractButton"
+        android:layout_marginBottom="102dp"
+        android:text="@string/reset"/>
+
+</RelativeLayout>

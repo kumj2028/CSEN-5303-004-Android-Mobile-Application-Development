@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Exercise2</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="tv1Text">Number:</string>
+    <string name="et1Hint">Enter Value</string>
+    <string name="subtractone">-1</string>
+    <string name="addone">+1</string>
+    <string name="reset">Reset Number</string>
+
+</resources>
