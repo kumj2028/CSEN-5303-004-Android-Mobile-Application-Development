@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Distance Converter</string>
+    <string name="inputHint">Enter Numeric Value</string>
+    <string name="convertButton">DO CONVERSION</string>
+</resources>

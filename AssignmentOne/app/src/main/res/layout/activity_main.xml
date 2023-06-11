@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/outputUnitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Output Unit"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline0"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/inputUnitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input Unit"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distance Converter"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <EditText
+        android:id="@+id/inputDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/inputHint"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="@+id/guideline0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+    <TextView
+        android:id="@+id/outputDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline0"
+        app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="@+id/guideline0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" >
+        <RadioButton
+            android:id="@+id/inputInch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="inch"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/inputFoot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="foot"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/inputYard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yard"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/inputMile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mile"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/inputCentimeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="centimeter"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/inputMeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="meter"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/inputKilometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kilometer"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline0"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" >
+        <RadioButton
+            android:id="@+id/outputInch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="inch"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/outputFoot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="foot"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/outputYard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yard"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/outputMile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mile"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/outputCentimeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="centimeter"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/outputMeter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="meter"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/outputKilometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kilometer"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/convertButton"
+        android:textSize="22sp"
+        android:onClick="onConvertButtonClicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
