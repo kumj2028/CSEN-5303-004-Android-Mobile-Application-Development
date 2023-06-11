@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MultiActivityExercise</string>
+    <string name="tv1_message">Enter message to display with another activity</string>
+    <string name="input_message">type message</string>
+    <string name="Intent1btn">Display With Activity A</string>
+    <string name="Intent2btn">Display With Activity B</string>
+    <string name="title_activity_a">ActivityA</string>
+    <string name="title_activity_b">ActivityB</string>
+</resources>
