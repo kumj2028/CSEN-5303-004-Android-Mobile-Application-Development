@@ -24,10 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
         SQLiteDatabase db = openOrCreateDatabase("EmployeeDatabase", MODE_PRIVATE, null);
 
-        db.execSQL("CREATE TABLE IF NOT EXISTS EmployeeInformation (LastName VARCHAR, FirstName VARCHAR, PhoneNumber VARCHAR);");
-        db.execSQL("INSERT INTO EmployeeInformation VALUES('Jones', 'Randy', '555-4325');");
-        db.execSQL("INSERT INTO EmployeeInformation VALUES('Smith', 'Robert', '555-1641');");
-        db.execSQL("INSERT INTO EmployeeInformation VALUES('Garcia', 'Roland', '555-4142');");
+        db.execSQL("DROP TABLE EmployeeInformation;");
+        db.execSQL("CREATE TABLE EmployeeInformation (LastName VARCHAR, FirstName VARCHAR, PhoneNumber VARCHAR, Address VARCHAR);");
+        db.execSQL("INSERT INTO EmployeeInformation VALUES('Jones', 'Randy', '555-4325', '123 Ave A');");
+        db.execSQL("INSERT INTO EmployeeInformation VALUES('Smith', 'Robert', '555-1641', '456 Lane B');");
+        db.execSQL("INSERT INTO EmployeeInformation VALUES('Garcia', 'Roland', '555-4142', '789 Street C');");
 
         // following lines query database and echo results to logcat
         Cursor cursor = db.rawQuery("SELECT * from EmployeeInformation", null);
