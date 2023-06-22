@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void navigateToURL(View view) {
-        String rawUrl = urlInput.getText().toString();
+        String rawUrl = "https://" + urlInput.getText().toString();
         Log.d("results", rawUrl);
         Uri uri = Uri.parse(rawUrl);
         Log.d("results", uri.toString());
