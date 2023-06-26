@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     SharedPreferences sharedPrefs;
     TextView xWinsView, oWinsView, tiesView, stateView;
     Button buttons[][], resetScores, newGame;
+    Toast toast;
 
 
     @Override
@@ -231,11 +232,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 state = X_TURN;
             }
             setViewText();
-        } else {
-            if (state == X_WIN || state == O_WIN || state == X_TIE || state == O_TIE) {
-                Toast.makeText(this, "game has ended, press 'NEW GAME' to start a new game", Toast.LENGTH_LONG).show();
-                return;
+        } else if (state == X_WIN || state == O_WIN || state == X_TIE || state == O_TIE) {
+            String toastText = "game has ended, press 'NEW GAME' to start a new game";
+            if (toast != null) {
+                toast.cancel();
             }
+            toast = Toast.makeText(this, toastText, Toast.LENGTH_LONG);
+            toast.show();
+        } else {
             for (int i = 0; i < 3; i+=1) {
                 for (int j = 0; j < 3; j+=1) {
                     if (buttons[i][j].getId() == v.getId()) {
@@ -251,7 +255,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             }
                             setViewText();
                         } else {
-                            Toast.makeText(this, "this square has already been played", Toast.LENGTH_LONG).show();
+                            String toastText = "this square has already been played";
+                            if (toast != null) {
+                                toast.cancel();
+                            }
+                            toast = Toast.makeText(this, toastText, Toast.LENGTH_LONG);
+                            toast.show();
+
                         }
                         return;
                     }
