@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TicTacToeApp</string>
+    <string name="reset_scores">RESET SCORES</string>
+    <string name="new_game">NEW GAME</string>
+</resources>
