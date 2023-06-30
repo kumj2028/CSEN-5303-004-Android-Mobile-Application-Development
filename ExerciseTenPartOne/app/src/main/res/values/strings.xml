@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LongRunningTaskExample</string>
+    <string name="screen_title">Long Running Task App</string>
+    <string name="status_message">background task has not yet started</string>
+    <string name="button1_label">Start Long Running Task</string>
+    <string name="button2_label">responsive Toast button</string>
+</resources>
