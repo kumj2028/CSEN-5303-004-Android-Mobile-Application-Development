@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Exercise-9</string>
+    <string name="button_1_text">Display fragment 1</string>
+    <string name="button_2_text">Display fragment 2</string>
+    <string name="button_3_text">Display fragment 3</string>
+    <string name="button_4_text">Display fragment 4</string>
+    <string name="fragment_1_text">This is fragment number 1</string>
+    <string name="fragment_2_text">This is fragment number 2</string>
+    <string name="fragment_3_text">This is fragment number 3</string>
+    <string name="fragment_4_text">This is fragment number 4</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
